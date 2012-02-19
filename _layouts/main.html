@@ -12,6 +12,7 @@
 	<link rel="stylesheet" href="css/style.css" />
 	
 	<script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
 	<link rel="shortcut icon" href="img/favicon.ico">
 </head>
 <body>
@@ -23,30 +24,37 @@
 					<img src="img/julia.png" alt="" />
 				</div>
 
-					<div class="pull-left">
-						<div class="site-title">
-							<h1>Kyle Paulsen</h1>
-							<h3>Software Engineer</h3>
-						</div>
-					
-						<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
-						</a>
-						<!--<a class="brand" href="#">Project name</a>-->
-						<div class="nav-collapse">
-							<ul class="nav" style="margin-left: 30px;">
-								<li {% if page.url == "/" %} class="active" {% endif %}><a href="/">Home</a></li>
-								<li {% if page.url == "/about.html" %} class="active" {% endif %}><a href="about.html">About</a></li>
-								<li {% if page.url == "/blog.html" %} class="active" {% endif %}><a href="blog.html">Blog</a></li>
-								<li {% if page.url == "/projects.html" %} class="active" {% endif %}><a href="projects.html">Projects</a></li>
-								<li {% if page.url == "/experiments.html" %} class="active" {% endif %}><a href="experiments.html">Experiments</a></li>
-								<li {% if page.url == "/resume.html" %} class="active" {% endif %}><a href="resume.html">R&eacute;sum&eacute;</a></li>
-								<li {% if page.url == "/contact.html" %} class="active" {% endif %}><a href="contact.html">Contact</a></li>
-							</ul>
-						</div><!--/.nav-collapse -->
+				<div class="pull-left">
+					<div class="site-title">
+						<h1>Kyle Paulsen</h1>
+						<h3>Software Engineer</h3>
 					</div>
+				
+					<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</a>
+					<!--<a class="brand" href="#">Project name</a>-->
+					<div class="nav-collapse">
+						<ul class="nav" style="margin-left: 30px;">
+							<li {% if page.url == "/index.html" %} class="active" {% endif %}><a href="/">Home</a></li>
+							<li {% if page.url == "/about.html" %} class="active" {% endif %}><a href="about.html">About</a></li>
+							<li {% if page.url == "/blog.html" %} class="active" {% endif %}><a href="blog.html">Blog</a></li>
+							<li {% if page.url == "/projects.html" %} class="active" {% endif %}><a href="projects.html">Projects</a></li>
+							<li {% if page.url == "/experiments.html" %} class="active" {% endif %}><a href="experiments.html">Experiments</a></li>
+							<li {% if page.url == "/resume.html" %} class="active" {% endif %}><a href="resume.html">R&eacute;sum&eacute;</a></li>
+							<li {% if page.url == "/contact.html" %} class="active" {% endif %}><a href="contact.html">Contact</a></li>
+						</ul>
+					</div><!--/.nav-collapse -->
+				</div>
+				
+				<div class="networking-links pull-right">
+					<a href="mailto:kyle.a.paulsen@gmail.com"><img alt="gmail" src="img/gmail.png"></a>
+					<a href="http://www.linkedin.com/in/kylepaulsen"><img alt="linkedIn" src="img/linkedin.png"></a>
+					<a href="https://plus.google.com/u/0/114927046057873314726"><img alt="google+" src="img/googlep.png"></a>
+					<a href="https://picasaweb.google.com/114927046057873314726"><img alt="picassa" src="img/picassa.png"></a>
+				</div>
 				
 			</div>
 		</div>

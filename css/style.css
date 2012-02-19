@@ -8,3 +8,13 @@
 .site-title h1, h3 {
 	color: rgb(0,173,238);
 }
+
+.networking-links {
+	margin-top: 80px;
+	margin-right: 20px;
+}
+
+.networking-links a {
+	border: 0;
+	margin-left: 16px;
+}
