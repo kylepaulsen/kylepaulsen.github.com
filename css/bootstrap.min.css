@@ -633,3 +633,4 @@ a.thumbnail:hover{border-color:#0088cc;-webkit-box-shadow:0 1px 4px rgba(0, 105,
 .hide-on-small-screen{display:block;}
 .show-on-small-screen{display:none;}
 .title-and-nav{margin-left:30px;}
+.networking-links{position:static;right:0px;top:0px;}
