@@ -17,3 +17,12 @@
 	border: 0;
 	margin-left: 16px;
 }
+
+.small-networking-links {
+	display: inline;
+	margin-left: 14px;
+}
+
+.small-networking-links img{
+	width: 24px;
+}
