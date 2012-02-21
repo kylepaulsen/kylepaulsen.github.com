@@ -1,8 +1,11 @@
+.title-and-nav {
+	margin-left: 30px;
+}
+
 .site-title {
 	color: rgb(0,151,217);
 	font-family: Courier New, Courier;
 	margin-top: 22px;
-	margin-left: 30px;
 }
 
 .site-title h1, h3 {
