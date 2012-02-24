@@ -1,0 +1,46 @@
+Kyle Paulsen
+Software Engineer
+503.427.8340
+kyle.a.paulsen@gmail.com
+
+Languages
+* Java
+* C / C++
+* JavaScript
+* SQL
+* PHP
+
+Skills
+* Eclipse
+* Unix, Windows
+* Database Design and Management
+* Git
+* XML
+
+Technology
+* JQuery
+* HTML5
+* Android
+* Java EE (Glassfish)
+* SOAP
+* REST 
+
+Experience
+ Alert Data Logging Service (September 2011 — March 2012)
+ Co-Leader and Programmer
+  * Worked in an agile team to complete an information logging service for a client. 
+  * Oversaw  project tasks done by teammates and advised on better programming methods.
+  * Application used to alert technicians to critical problems produced by major systems.
+
+Work Experience
+ Whizkids IT (September 2008 — Present)
+ Lead Developer
+  * Designed and implemented a computer check-in system that allows technicians to track 150+ services, as well as important variables such as check-in time, monthly revenue, and service invoices.
+  * Wrote algorithm to determine how important a service is based on check-in time, current state of the service, and the service tier.
+  * Developed statistics back-end that displays income over time and customer relation information. 
+  * Implemented a credit or debit card processing system used to complete payment transactions.
+  * Acted as company web developer for clients with diverse needs.
+
+Education
+ Portland State University (September 2008 — June 2012)
+ Bachelor of Science — Computer Science

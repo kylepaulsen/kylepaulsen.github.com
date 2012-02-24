@@ -13,6 +13,11 @@
 	
 	<script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
 	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	{% if page.url == "/resume.html" %}
+	<script type="text/javascript" src="js/jquery.jqzoom-core.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/jquery.jqzoom.css">  
+	{% endif %}
+	
 	<link rel="shortcut icon" href="img/favicon.ico">
 </head>
 <body>
@@ -21,7 +26,7 @@
 		<div class="navbar-inner" style="border-radius: 0;">
 			<div class="container">
 				<div class="pull-left hide-on-small-screen">
-					<img src="img/julia.png" alt="" />
+					<img class="scaleable-img" src="img/julia.png" alt="" />
 				</div>
 
 				<div class="title-and-nav pull-left">
@@ -39,23 +44,23 @@
 							<li class='{% if page.url == "/projects.html" %} active{% endif %}'><a class="corner-top" href="projects.html">Projects</a></li>
 							<li class='{% if page.url == "/experiments.html" %} active{% endif %}'><a class="corner-top" href="experiments.html">Experiments</a></li>
 							<li class='{% if page.url == "/resume.html" %} active{% endif %}'><a class="corner-top" href="resume.html">R&eacute;sum&eacute;</a></li>
-							<li class='{% if page.url == "/contact.html" %} active{% endif %}'><a class="corner-top" href="contact.html">Contact</a></li>
+							<li class='{% if page.url == "/contact.html" %} active{% endif %}'><a class="corner-top" href="mailto:kyle.a.paulsen@gmail.com">Contact</a></li>
 						</ul>
 						<div class="show-on-small-screen">
-							<a class="small-networking-links" href="mailto:kyle@kylepaulsen.com"><img alt="gmail" src="img/gmail.png"></a>
-							<a class="small-networking-links" href="http://www.linkedin.com/in/kylepaulsen"><img alt="linkedIn" src="img/linkedin.png"></a>
-							<a class="small-networking-links" href="https://plus.google.com/u/0/114927046057873314726"><img alt="google+" src="img/googlep.png"></a>
-							<a class="small-networking-links" href="https://picasaweb.google.com/114927046057873314726"><img alt="picassa" src="img/picassa.png"></a>
+							<a class="small-networking-links" href="mailto:kyle.a.paulsen@gmail.com"><img class="scaleable-img" alt="gmail" src="img/gmail.png"></a>
+							<a class="small-networking-links" href="http://www.linkedin.com/in/kylepaulsen"><img class="scaleable-img" alt="linkedIn" src="img/linkedin.png"></a>
+							<a class="small-networking-links" href="https://plus.google.com/u/0/114927046057873314726"><img class="scaleable-img" alt="google+" src="img/googlep.png"></a>
+							<a class="small-networking-links" href="https://picasaweb.google.com/114927046057873314726"><img class="scaleable-img" alt="picassa" src="img/picassa.png"></a>
 						</div>
 					</div><!--/.nav-collapse -->
 				</div>
 				
 				<div class="networking-links pull-right">
 					<div class="hide-on-small-screen">
-						<a href="mailto:kyle@kylepaulsen.com"><img alt="gmail" src="img/gmail.png"></a>
-						<a href="http://www.linkedin.com/in/kylepaulsen"><img alt="linkedIn" src="img/linkedin.png"></a>
-						<a href="https://plus.google.com/u/0/114927046057873314726"><img alt="google+" src="img/googlep.png"></a>
-						<a href="https://picasaweb.google.com/114927046057873314726"><img alt="picassa" src="img/picassa.png"></a>
+						<a href="mailto:kyle.a.paulsen@gmail.com"><img class="scaleable-img" alt="gmail" src="img/gmail.png"></a>
+						<a href="http://www.linkedin.com/in/kylepaulsen"><img class="scaleable-img" alt="linkedIn" src="img/linkedin.png"></a>
+						<a href="https://plus.google.com/u/0/114927046057873314726"><img class="scaleable-img" alt="google+" src="img/googlep.png"></a>
+						<a href="https://picasaweb.google.com/114927046057873314726"><img class="scaleable-img" alt="picassa" src="img/picassa.png"></a>
 					</div>
 					<div style="margin-top: 10px;">
 						<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
