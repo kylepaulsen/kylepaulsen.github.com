@@ -26,14 +26,14 @@ Technology
 * REST 
 
 Experience
- Alert Data Logging Service (September 2011 — March 2012)
+ Alert Data Logging Service (September 2011 - March 2012)
  Co-Leader and Programmer
   * Worked in an agile team to complete an information logging service for a client. 
   * Oversaw  project tasks done by teammates and advised on better programming methods.
   * Application used to alert technicians to critical problems produced by major systems.
 
 Work Experience
- Whizkids IT (September 2008 — Present)
+ Whizkids IT (September 2008 - Present)
  Lead Developer
   * Designed and implemented a computer check-in system that allows technicians to track 150+ services, as well as important variables such as check-in time, monthly revenue, and service invoices.
   * Wrote algorithm to determine how important a service is based on check-in time, current state of the service, and the service tier.
@@ -42,5 +42,5 @@ Work Experience
   * Acted as company web developer for clients with diverse needs.
 
 Education
- Portland State University (September 2008 — June 2012)
- Bachelor of Science — Computer Science
+ Portland State University (September 2008 - June 2012)
+ Bachelor of Science - Computer Science
