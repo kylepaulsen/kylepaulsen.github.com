@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Mandelbrot Set Generator</title>
+<script type="text/javascript">
+var canvas;
+var ctx;
+
+var canvasXY;
+var mousePt;
+
+var width;
+var height;
+var xmin;
+var xmax;
+var ymin;
+var ymax;
+var iterations;
+var cutOffDist;
+var cutOffDistSquared;
+var colors;
+	
+var xaxis;
+var yaxis;
+var date;
+var renderStartTime;
+
+function toDraw(){
+	document.getElementById('loading').innerHTML = "Loading...";
+	date = new Date();
+	renderStartTime = date.getTime();
+	setTimeout('draw()', '1');
+}
+
+function draw(){
+	document.getElementById('loading').innerHTML = "Loading...";
+	width = document.getElementById('cwid').value - 0;
+	height = document.getElementById('chei').value - 0;
+	xmin = document.getElementById('xmin').value - 0;
+	xmax = document.getElementById('xmax').value - 0;
+	ymin = document.getElementById('ymin').value - 0;
+	ymax = document.getElementById('ymax').value - 0;
+	iterations = document.getElementById('iter').value - 0;
+	cutOffDist = document.getElementById('dist').value - 0;
+	cutOffDistSquared = cutOffDist * cutOffDist;
+	colors = document.getElementById('colors').checked;
+	
+	xaxis = xmax - xmin;
+	yaxis = ymax - ymin;
+	
+	canvas = document.getElementById('canvas');
+	ctx = canvas.getContext('2d');
+	
+	clearCanvas();
+	
+	for(var y=0; y<height; ++y){
+		for(var x=0; x<width; ++x){
+	
+			var x0 = x * xaxis / width + xmin;
+			var y0 = y * yaxis / height + ymin;
+			
+			if(checkBulbBounds(x,y,x0,y0)){
+				//pt is in bulb 1 or 2 or 3
+				ctx.fillStyle = 'black';
+				ctx.fillRect(x,y,1,1);
+				
+			}else{
+				//iterate method...
+				x1 = 0;
+				y1 = 0;
+				z = 0;
+		
+				while((x1*x1 + y1*y1) <= cutOffDistSquared && z < iterations ){
+					xtemp = x1*x1 - y1*y1 + x0;
+				    y1 = 2*x1*y1 + y0;
+				    x1 = xtemp;
+				    ++z;
+				}
+				
+				if(z == iterations){
+					ctx.fillStyle = 'black';
+					ctx.fillRect(x,y,1,1);
+				}else if(colors){
+					var red = Math.floor(Math.abs((30*x1*y1/Math.sin(z))%255));
+					var green = Math.floor(Math.abs((30*x1*x1/Math.cos(z))%255));
+					var blue = Math.floor(Math.abs((30*y1*y1/Math.tan(z))%255));
+					ctx.fillStyle = 'rgb('+red+','+green+','+blue+')';
+					ctx.fillRect(x,y,1,1);
+				}
+			}
+		}
+	}
+	date = new Date();
+	document.getElementById('loading').innerHTML = "Render Time: "+((date.getTime() - renderStartTime)/1000.0)+" seconds";
+}
+
+function checkBulbBounds(x,y,x0,y0){
+	//http://cosinekitty.com/mandel_orbits_analysis.html
+	
+	if(cutOffDist < 1.5){
+		return false;
+	}
+	
+	y0 = Math.abs(y0);
+	
+	//check bulb 1
+	if(x0 >= -0.75 && x0 <= 0.375 && y0 < 0.64951905284){
+		var x02 = x0 * x0;
+		var y02 = y0 * y0;
+		var q = x02 - (x0 * 0.5) + 0.0625 + y02;
+		var q2 = q*q;
+		var bulb = q2 + q * (x0 - 0.25);
+			
+		if(bulb < (y02 * 0.25)){
+			//pt is in bulb 1
+			return true;
+		}else{
+			return false;
+		}
+	}else if(x0 >= -1.25 && x0 < -0.75 && y0 <= 0.25){
+	//check bulb 2
+		var dist = (x0+1)*(x0+1) + y0*y0;
+		if(dist <= 0.0625){
+			//pt is in bulb 2
+			return true;
+		}else{
+			return false;
+		}
+	}else if(x0 >= -1.375 && x0 < -1.25 && y0 <= 0.0625){
+	//check bulb 3 (3 is not a perfect circle... so doesnt fit this so well)
+		var dist = (x0+1.3075)*(x0+1.3075) + y0*y0;
+		if(dist <= 0.0032){
+			//pt is in bulb 3
+			return true;
+		}else{
+			return false;
+		}
+	}
+	return false;
+}
+
+function clearCanvas(){
+	//Have to do it this way because the canvas only understands its height and 
+	//width from the attributes in the tag... so no style.width setting.
+	var newWidth = document.getElementById('cwid').value;
+	var newHeight = document.getElementById('chei').value;
+	canvas.width = newWidth;
+	canvas.height = newHeight;
+	ctx.fillStyle = 'white';
+	ctx.fillRect(0,0,newWidth,newHeight);
+	canvasXY = getpos(canvas);
+}
+
+function mouseDown(event){
+	if(event.which == 3){
+		return false;
+	}
+	
+	var x = event.pageX;
+	var y = event.pageY;
+	x -= canvasXY.x;
+	y -= canvasXY.y;
+	mousePt = {x:x, y:y};
+}
+
+function mouseUp(event){
+	if(event.which == 3){
+		return false;
+	}
+	var x = event.pageX;
+	var y = event.pageY;
+	x -= canvasXY.x;
+	y -= canvasXY.y;
+	
+	var pt1x = mousePt.x * xaxis / width + xmin;
+	var pt1y = mousePt.y * yaxis / height + ymin;
+	var pt2x = x * xaxis / width + xmin;
+	var pt2y = y * yaxis / height + ymin;
+	
+	var xminObj = document.getElementById('xmin');
+	var xmaxObj = document.getElementById('xmax');
+	var yminObj = document.getElementById('ymin');
+	var ymaxObj = document.getElementById('ymax');
+	
+	if(mousePt.x == x && mousePt.y == y){
+		//mouse was clicked but not dragged.
+		var midPtx = (xmax + xmin)/2;
+		var midPty = (ymax + ymin)/2;
+		var xptDif = pt1x - midPtx;
+		var yptDif = pt1y - midPty;
+		
+		xminObj.value = (xminObj.value - 0) + xptDif;
+		xmaxObj.value = (xmaxObj.value - 0) + xptDif;
+		yminObj.value = (yminObj.value - 0) + yptDif;
+		ymaxObj.value = (ymaxObj.value - 0) + yptDif;
+	}else{
+		//determine how mouse was dragged...
+		if(mousePt.x < x && mousePt.y < y){
+			//first pt is north west of second.
+			xminObj.value = pt1x;
+			xmaxObj.value = pt2x;
+			yminObj.value = pt1y;
+			ymaxObj.value = pt2y;
+		}else if(mousePt.x < x && mousePt.y > y){
+			//first pt is south west of second.
+			xminObj.value = pt1x;
+			xmaxObj.value = pt2x;
+			yminObj.value = pt2y;
+			ymaxObj.value = pt1y;
+		}else if(mousePt.x > x && mousePt.y < y){
+			//first pt is north east of second.
+			xminObj.value = pt2x;
+			xmaxObj.value = pt1x;
+			yminObj.value = pt1y;
+			ymaxObj.value = pt2y;
+		}else{
+			//first pt is south east of second.
+			xminObj.value = pt2x;
+			xmaxObj.value = pt1x;
+			yminObj.value = pt2y;
+			ymaxObj.value = pt1y;
+		}
+	}
+	
+	clearCanvas();
+	toDraw();
+}
+
+function getpos(o) {
+	return { x:o.offsetLeft, y:o.offsetTop }
+}
+
+function resetDefaults(){
+	document.getElementById('cwid').value = '400';
+	document.getElementById('chei').value = '300';
+	document.getElementById('xmin').value = '-2.0';
+	document.getElementById('xmax').value = '0.5';
+	document.getElementById('ymin').value = '-1.0';
+	document.getElementById('ymax').value = '1.0';
+	document.getElementById('iter').value = '50';
+	document.getElementById('dist').value = '2.0';
+	document.getElementById('colors').checked = false;
+}
+
+function saveImage(){
+	var data = canvas.toDataURL("image/png");
+	var img = document.createElement("img");
+	img.src = data;
+   
+	var output = document.getElementById('imageDiv');
+	while (output.hasChildNodes()){
+		output.removeChild(output.firstChild);
+	}
+	output.appendChild(img);
+	window.location.hash="ss";
+}
+
+</script>
+
+</head>
+
+<body onload="toDraw()">
+	<a href="../experiments.html"><-- Back</a>
+	<h1>Mandelbrot Set Generator</h1>
+	<h3>Works best in Google Chrome.</h3>
+	<b>Instructions:</b><br/>
+	<ul>
+	<li>Modify any of the numbers and click generate</li>
+	<li>Keep all numbers lowish, or you will have to wait a LONG time.</li>
+	<li>Click and Drag anywhere in the canvas to specify a new window area and it will automatically zoom to it.</li>
+	<li>Click in one spot to define a new center point for the canvas to move to.</li>
+	</ul>
+	<table>
+		<tr><td>
+		Canvas Width:
+		</td><td>
+		<input type="text" id="cwid" value="400" />
+		</td><td>
+		Xmin:
+		</td><td>
+		<input type="text" id="xmin" value="-2.0" />
+		</td></tr>
+		<tr><td>
+		Canvas Height:
+		</td><td>
+		<input type="text" id="chei" value="300" />
+		</td><td>
+		Xmax:
+		</td><td>
+		<input type="text" id="xmax" value="0.5" />
+		</td></tr>
+		<tr><td>
+		Iterations:
+		</td><td>
+		<input type="text" id="iter" value="50" />
+		</td><td>
+		Ymin:
+		</td><td>
+		<input type="text" id="ymin" value="-1.0" />
+		</td></tr>
+		<tr><td>
+		Cut Off Dist:
+		</td><td>
+		<input type="text" id="dist" value="2.0" />
+		</td><td>
+		Ymax:
+		</td><td>
+		<input type="text" id="ymax" value="1.0" />
+		</td></tr>
+	</table>
+	<input type="button" value="Generate" onclick="toDraw();" />
+	<input type="button" value="Reset to Defaults" onclick="resetDefaults();" />
+	<input type="button" value="Save Image" onclick="saveImage();" />
+	Colors: <input type="checkbox" id="colors" value="1" /> 
+	<span id="loading"></span>
+	<br/><br/>
+	<div id="canvasDiv">
+		<canvas id="canvas" onmouseup="mouseUp(event);" onmousedown="mouseDown(event);" style="border: 1px solid #000000;"></canvas>
+	</div>
+	<span>If there is an image below here, right click on it to save it.</span>
+	<div id="imageDiv"></div>
+	<a name="ss"></a>
+</body>
+</html>

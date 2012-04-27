@@ -3,19 +3,6 @@ layout: main
 title: R&eacute;sum&eacute;
 description: Kyle Paulsen's webpage for software development and contact information.
 ---
-<script type="text/javascript">
-	$(document).ready(function(){  
-		var w = Math.max(200, $(".container").width() - 250);
-		var h = Math.max(260, $(".container").width() / 1.625);
-		$('.img_zoom').jqzoom({
-			zoomType: 'drag',
-			zoomWidth: w,
-			zoomHeight: h,
-			title: false
-		});
-	}); 
-</script>
-
 <div class="container">
 	Click and drag the blue square to view my r&eacute;sum&eacute; or download a copy from one of the following links:<br/>
 	<ul>
@@ -23,7 +10,7 @@ description: Kyle Paulsen's webpage for software development and contact informa
 		<li><a href="kyle_paulsen_resume.txt">Kyle's R&eacute;sum&eacute; (TXT Format)</a></li>
 		<li><a href="img/my_resume.png">Kyle's R&eacute;sum&eacute; (PNG Image Format)</a></li>
 	</ul>
-	<a href="img/my_resume.png" class="img_zoom" title="My Resume">  
-		<img src="img/my_resume_small.png" title="My Resume">  
-	</a>
+	<div class="span12">
+		<img style="width: 100%;" src="img/my_resume.png">
+	</div>
 </div>

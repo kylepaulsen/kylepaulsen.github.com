@@ -1,8 +1,54 @@
 ---
 layout: main
 title: Experiments
-description: Kyle Paulsen's webpage for software development and contact information.
+description: Kyle Paulsen's small projects that were created in an afternoon for fun.
 ---
 <div class="container">
-	<h3>Someday, content will live here...</h3>
+	<div class="row-fluid">
+		<h1>Experiments</h1>
+	</div>
+	<div class="row-fluid project-list">
+		<div class="span3">
+			<a class="thumbnail" href="experiments/game_of_life.html">
+				<img alt="Conway's Game of Life" src="img/gol.png">
+			</a>
+		</div>
+		<div class="span9">
+			<a href="experiments/game_of_life.html"><h2>Conway's Game of Life</h2></a>
+			<p>I decided to make an implementation of this famous cellular automaton discovered by the mathematician John Horton Conway. A friend of mine was talking about this and afterwards I realized how fun it would be to code it up using the canvas tag. For anyone that is new to the game of life, here is how it works: The game's universe consists of a grid containing cells. Each cell can either be alive or dead. The game also has a unit of time called a generation. The arrangement of alive and dead cells determine how the next generation will turn out. If a dead cell is surrounded by 3 alive ones, the dead cell becomes alive in the next generation. On the other hand, if an alive cell is not surrounded by 2 or 3 other alive cells, that alive cell will die off in the next generation. Every cell's fate is determined for the next generation and then painted using these simple rules to create a very interesting effect. To read more about the game of life check <a href="http://en.wikipedia.org/wiki/Conway%27s_Game_of_Life">wikipedia</a>. My implementation uses color to represent how old a cell is.</p>
+		</div>
+	</div>
+	<div class="row-fluid project-list">
+		<div class="span3">
+			<a class="thumbnail" href="experiments/juliaSet.html">
+				<img alt="Julia Set" src="img/juliaset.png">
+			</a>
+		</div>
+		<div class="span9">
+			<a href="experiments/juliaSet.html"><h2>Julia Set</h2></a>
+			<p>This is the Julia Set named after the French mathematician Gaston Julia. It might not be as popular as the Mandelbrot Set, but it is definitely as beautiful. The Julia Set is actually related to the Mandelbrot Set in that their generating formulae are very similar. This fractal is probably my favorite. You can find more information about the Julia Set at <a href="http://en.wikipedia.org/wiki/Julia_set">wikipedia</a>. My implementation lets you explore any Julia set you want and zoom around in it. There is also a preview window that shows you what the Julia set looks like under your mouse (I particularly love this feature because it looks awesome). You can also save images you generate.</p>
+		</div>
+	</div>
+	<div class="row-fluid project-list">
+		<div class="span3">
+			<a class="thumbnail" href="experiments/mandelbrotSet.html">
+				<img alt="Mandelbrot Set" src="img/mandel.png">
+			</a>
+		</div>
+		<div class="span9">
+			<a href="experiments/mandelbrotSet.html"><h2>Mandelbrot Set</h2></a>
+			<p>The Mandelbrot Set was the first fractal I learned how to make. Whenever I want to do a graphics program for fun, I usually try to create the Mandelbrot Set first. This famous fractal was named after the mathematician Beno&icirc;t Mandelbrot, who studied and popularized it. This fractal is a collection of points that follow a very simple set of rules. The black area holds points that are in the "Mandelbrot Set". Aren't fractals amazing and beautiful? Learn more about the Mandelbrot Set on <a href="http://en.wikipedia.org/wiki/Mandelbrot_set">wikipedia</a>. My implementation lets the user explore the Mandelbrot Set by moving around and zooming in it. You can change many different parameters and then save the image you generate when you find something cool.</p>
+		</div>
+	</div>
+	<div class="row-fluid project-list">
+		<div class="span3">
+			<a class="thumbnail" href="experiments/collatz_conjecture_graphics.html">
+				<img alt="collatz conjecture graphics" src="img/collatz.png">
+			</a>
+		</div>
+		<div class="span9">
+			<a href="experiments/collatz_conjecture_graphics.html"><h2>Collatz Conjecture with Graphics</h2></a>
+			<p>The Collatz Conjecture is an interesting problem named after Lothar Collatz, who first proposed it in 1937. The problem works like so: Pick any natural number (whole number greater than -1 including or excluding 0 based on your preference). If the number you picked is even, divide it in half. If it is odd, multiply it by 3 and then add 1. Take the result as your new number and repeat the process. No matter what number you originally pick, you always seem to end up at 1 eventually. According to <a href="http://en.wikipedia.org/wiki/Collatz_conjecture">wikipedia</a>: Paul Erdos said, allegedly, about the Collatz conjecture: "Mathematics is not yet ripe for such problems" and also offered $500 for its solution (the proof that you always hit 1). My implementation chooses a wide range of natural numbers to start with and logs how many times it needs to go through the process to hit 1. It uses these two numbers to paint a picture. This is one of the possible results. There are some more in the file if you download the HTML.</p>
+		</div>
+	</div>
 </div>
