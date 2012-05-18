@@ -32,6 +32,9 @@ var colors = true;
 var interval;
 var timeout = 100;
 
+var born = [0,0,0,1,0,0,0,0,0];
+var live = [0,0,1,1,0,0,0,0,0];
+
 function init(){
   canvas = $("#canvas");
   generation_span = $("#gen_num");
@@ -99,6 +102,26 @@ function init(){
     }
   });
   
+  $(".born_boxes").click(function(elem){
+    var el = $(elem.target);
+    var spot = parseInt(el.attr("id")[5]);
+    if(el.attr("checked") === undefined){
+      born[spot] = false;
+    }else{
+      born[spot] = true;
+    }
+  });
+  
+  $(".live_boxes").click(function(elem){
+    var el = $(elem.target);
+    var spot = parseInt(el.attr("id")[5]);
+    if(el.attr("checked") === undefined){
+      live[spot] = false;
+    }else{
+      live[spot] = true;
+    }
+  });
+  
   cell_wid = $("#cell_wid").val()-0;
   cell_hei = $("#cell_hei").val()-0;
   
@@ -121,6 +144,8 @@ function init(){
     ex.chei = chei;
     ex.cell_wid = cell_wid;
     ex.cell_hei = cell_hei;
+    ex.born = born.map(function(e){return e+0;});
+    ex.live = live.map(function(e){return e+0;});
     ex.grid = grid1;
     $("#inout").val(JSON.stringify(ex));
   });
@@ -128,6 +153,7 @@ function init(){
   $("#import").click(importJSON);
   
   $("#randomize").click(function(){
+    clearGrid();
     randomizeGrid();
   });
   
@@ -236,6 +262,30 @@ var changeCanvas = function(){
 var importJSON = function(){
   if($("#inout").val() != ""){
     var im = JSON.parse($("#inout").val());
+    if(im.born !== undefined){
+      born = im.born;
+    }else{
+      born = [0,0,0,1,0,0,0,0,0];
+    }
+    if(im.live !== undefined){
+      live = im.live;
+    }else{
+      live = [0,0,1,1,0,0,0,0,0];
+    }
+    for(var x=0; x<9; ++x){
+      if(born[x]){
+        $("#born_"+x).attr("checked", "checked");
+      }else{
+        $("#born_"+x).removeAttr("checked");
+      }
+    }
+    for(var x=0; x<9; ++x){
+      if(live[x]){
+        $("#live_"+x).attr("checked", "checked");
+      }else{
+        $("#live_"+x).removeAttr("checked");
+      }
+    }
     $("#cwid").val(im.cwid);
     $("#chei").val(im.chei);
     $("#cell_wid").val(im.cell_wid);
@@ -297,15 +347,15 @@ function simulate(){
     for(var y=0; y<ghei; ++y){
       var alive = countAliveNeighbors(x,y);
       if(grid1[x][y]){
-        if(alive < 2){
-          grid2[x][y] = 0;
-        }else if(alive < 4){
+        //spot is currently living...
+        if(live[alive]){
           grid2[x][y] = grid1[x][y]+1;
         }else{
           grid2[x][y] = 0;
         }
       }else{
-        if(alive == 3){
+        //spot is currently dead...
+        if(born[alive]){
           grid2[x][y] = 1;
         }else{
           grid2[x][y] = 0;
@@ -423,7 +473,6 @@ function getpos(o) {
 </head>
 
 <body onload="init()">
-	<a href="../experiments.html"><-- Back</a>
 	<h1>Conway's Game of Life</h1>
 	<h3>Works best in Google Chrome.</h3>
 	<b>Instructions:</b><br/>
@@ -444,7 +493,27 @@ function getpos(o) {
 		Grid Width:
 		</td><td>
 		<input type="text" id="cell_wid" value="10" />
-		</td></tr>
+		</td><td>
+    # of Alive Neighbors
+    </td><td style="text-align: center;">
+    0
+    </td><td style="text-align: center;">
+    1
+    </td><td style="text-align: center;">
+    2
+    </td><td style="text-align: center;">
+    3
+    </td><td style="text-align: center;">
+    4
+    </td><td style="text-align: center;">
+    5
+    </td><td style="text-align: center;">
+    6
+    </td><td style="text-align: center;">
+    7
+    </td><td style="text-align: center;">
+    8
+    </td></tr>
 		<tr><td>
 		Canvas Height:
 		</td><td>
@@ -453,12 +522,54 @@ function getpos(o) {
 		Grid Height:
 		</td><td>
 		<input type="text" id="cell_hei" value="10" />
+    </td><td>
+    To be born:
+    </td><td>
+    <input id="born_0" class="born_boxes" type="checkbox" />
+    </td><td>
+    <input id="born_1" class="born_boxes" type="checkbox" />
+    </td><td>
+    <input id="born_2" class="born_boxes" type="checkbox" />
+    </td><td>
+    <input id="born_3" class="born_boxes" type="checkbox" checked="checked" />
+    </td><td>
+    <input id="born_4" class="born_boxes" type="checkbox" />
+    </td><td>
+    <input id="born_5" class="born_boxes" type="checkbox" />
+    </td><td>
+    <input id="born_6" class="born_boxes" type="checkbox" />
+    </td><td>
+    <input id="born_7" class="born_boxes" type="checkbox" />
+    </td><td>
+    <input id="born_8" class="born_boxes" type="checkbox" />
 		</td></tr>
+    <tr><td colspan="4">
+    <input type="button" value="Apply Settings" id="apply" />
+    <input type="button" value="Clear Grid" id="clearbtn" />
+    </td><td>
+    To stay alive:
+    </td><td>
+    <input id="live_0" class="live_boxes" type="checkbox" />
+    </td><td>
+    <input id="live_1" class="live_boxes" type="checkbox" />
+    </td><td>
+    <input id="live_2" class="live_boxes" type="checkbox" checked="checked" />
+    </td><td>
+    <input id="live_3" class="live_boxes" type="checkbox" checked="checked" />
+    </td><td>
+    <input id="live_4" class="live_boxes" type="checkbox" />
+    </td><td>
+    <input id="live_5" class="live_boxes" type="checkbox" />
+    </td><td>
+    <input id="live_6" class="live_boxes" type="checkbox" />
+    </td><td>
+    <input id="live_7" class="live_boxes" type="checkbox" />
+    </td><td>
+    <input id="live_8" class="live_boxes" type="checkbox" />
+    </td></tr>
   </table>
 	</div>
-	<div style="clear: both;">
-    <input type="button" value="Apply Settings" id="apply" />
-    <input type="button" value="Clear Grid" id="clearbtn" /><br/><br/>
+	<div style="clear: both; padding-top: 20px;">
     <input type="button" value="Simulate" id="simbtn" />
     <input type="button" value="Next Gen" id="nextgen" style="margin-right: 20px;" />
     Grid Wrap: <input type="checkbox" id="wrap" style="margin-right: 20px;" />
