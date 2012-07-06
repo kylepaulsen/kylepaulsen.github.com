@@ -5,7 +5,8 @@ kyle.a.paulsen@gmail.com
 
 Education
  Bachelor of Science - Computer Science
- Portland State University (September 2008 - June 2012)
+ Portland State University - Portland, OR
+ Graduated June 2012
  
 Languages
 * Java
@@ -22,7 +23,8 @@ Technology
 * Node.js
 * Android SDK
 * OpenGL
-* SOAP and REST
+* MVC
+* REST
 
 Skills
 * Eclipse
