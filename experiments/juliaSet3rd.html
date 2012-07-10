@@ -30,7 +30,7 @@ var yaxis;
 var date;
 var renderStartTime;
 
-var ctrlDown = false;
+var shiftDown = false;
 
 function toDraw(a){
 	if(a == 1){
@@ -176,7 +176,7 @@ function mouseUp(e){
 	
 	if(mousePt.x == x && mousePt.y == y){
 		//mouse was clicked but not dragged.
-		if(ctrlDown){
+		if(shiftDown){
 			initZx.value = pt1x;
 			initZy.value = pt1y;
 		}else{
@@ -220,7 +220,7 @@ function mouseUp(e){
 	}
 
 	clearCanvas();
-	toDraw(ctrlDown);
+	toDraw(shiftDown);
 }
 
 function previewCanvas(e){
@@ -306,9 +306,9 @@ document.onkeydown = function(event){
 }
 
 function keydown(key){
-	 if(key == 17){
-            ctrlDown = true;
-     }
+    if(key == 16){
+      shiftDown = true;
+    }
 }
 
 document.onkeyup = function(event){
@@ -325,8 +325,8 @@ document.onkeyup = function(event){
 }
 
 function keyup(key){
-     if(key == 17){
-            ctrlDown = false;
+     if(key == 16){
+            shiftDown = false;
      }
 }
 
@@ -345,7 +345,7 @@ function keyup(key){
 	<li>Keep all numbers lowish, or you will have to wait a LONG time.</li>
 	<li>Click and Drag anywhere in the canvas to specify a new window area and it will automatically zoom to it.</li>
 	<li>Click in one spot to define a new center point for the canvas to move to.</li>
-	<li>Ctrl+Click in one spot to define a new initial complex point that will render something like in the preview.</li>
+	<li>Shift+Click in one spot to define a new initial complex point that will render something like in the preview.</li>
 	</ul>
 	<div style="float: left;">
 	<table>
