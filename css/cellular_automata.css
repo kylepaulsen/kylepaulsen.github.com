@@ -1,0 +1,91 @@
+.rule-div {
+  border: 1px solid #000000;
+  float: left;
+  width: 70px;
+  height: 45px;
+  text-align: center;
+  padding-top: 15px;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.alive {
+  background-color: #444444;
+  border: 1px solid #000000;
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin: 0 3px;
+}
+.dead {
+  background-color: #ffffff;
+  border: 1px solid #000000;
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin: 0 3px;
+}
+.rule-btn {
+  cursor: pointer;
+}
+.editorCell {
+  border: 1px solid #000000;
+  float: left;
+  width: 48px;
+  height: 34px;
+  text-align: center;
+  padding-top: 16px;
+  font-size: 1.0em;
+  cursor: pointer;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.editorCellOn {
+  color: #ffffff;
+  background-color: #000000;
+}
+.editorCellOff {
+  color: #000000;
+  background-color: #ffffff;
+}
+.left {
+  float: left;
+}
+.clearfix {
+  clear: both;
+}
+.rule-input-div {
+  padding-top: 10px;
+  height: 50px;
+}
+.rule-input-div input {
+  width: 30px;
+}
+.canvas-wrapper {
+  clear: both;
+  padding-top: 20px;
+}
+
+#pixelEditor {
+  margin-top: 20px;
+}
+#initCondData {
+  width: 650px;
+  display: none;
+}
+#import {
+  display: none;
+}
+#pixelSelectDiv {
+  cursor: pointer;
+}
+#canvasDiv {
+  border: 1px solid #000;
+}

@@ -2,12 +2,13 @@ Kyle Paulsen
 Software Engineer
 503.427.8340
 kyle.a.paulsen@gmail.com
+www.kylepaulsen.com
 
 Education
- Bachelor of Science - Computer Science
- Portland State University - Portland, OR
- Graduated June 2012
- 
+  Bachelor of Science - Computer Science
+  Portland State University - Portland, OR
+  Graduated June 2012
+
 Languages
 * Java
 * JavaScript
@@ -33,17 +34,19 @@ Skills
 * Git
 * Agile Development
 
-Experience
- Alert Data Logging Service (September 2011 - March 2012)
- Co-Leader and Programmer
-  * Worked in an agile team to complete an information logging service for a client. 
-  * Oversaw project tasks done by teammates and advised on better programming methods.
-  * Application used to alert technicians to critical problems produced by major systems.
+Work Experience
+  Janrain (August 2012 — Present)
+  User Interface Engineer
+  * Work in an agile team of six while tracking and completing many necessary refactor, new feature, and bug tickets in Jira.
+  * Maintain and improve Janrain’s extensive “Widgets” JavaScript library that contains over 20,000 lines of code.
+  * Takes an active role in deploying the code to the testing servers for quality assurance and to production on Amazon S3.
+  * Responsible for writing unit tests using Testem and Mocha to perform quality assurance on all major browsers.
 
- Whizkids IT (September 2008 - Present)
- Lead Developer
+  Whizkids IT (September 2008 - Present)
+  Lead Developer
   * Designed and implemented a computer check-in system that allows technicians to track 150+ services, as well as important variables such as check-in time, monthly revenue, and service invoices.
-  * Wrote algorithm to determine how important a service is based on check-in time, current state of the service, and the service tier.
-  * Developed statistics back-end that displays income over time and customer relation information. 
-  * Implemented a credit or debit card processing system used to complete payment transactions.
 
+Other Experience
+  Alert Data Logging Service (September 2011 - March 2012)
+  Co-Leader and Programmer
+  * Worked in a leadership position in an agile team to complete an information logging service for a client and lead the team to using better programming methods.
