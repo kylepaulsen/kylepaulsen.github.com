@@ -38,7 +38,7 @@ Work Experience
   Janrain (August 2012 - Present)
   User Interface Engineer
   * Work in an agile team of six while tracking and completing many necessary refactor, new feature, and bug tickets in Jira.
-  * Maintain and improve Janrain’s extensive "Widgets" JavaScript library that contains over 20,000 lines of code.
+  * Maintain and improve Janrain's extensive "Widgets" JavaScript library that contains over 20,000 lines of code.
   * Takes an active role in deploying the code to the testing servers for quality assurance and to production on Amazon S3.
   * Responsible for writing unit tests using Testem and Mocha to perform quality assurance on all major browsers.
 
