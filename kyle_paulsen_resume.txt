@@ -15,8 +15,8 @@ Languages
 * C / C++
 * SQL
 * PHP
-* Python
-* Ruby
+* Python (Novice)
+* Ruby (Novice)
 
 Technology
 * JQuery, AJAX, JSON
