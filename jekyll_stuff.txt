@@ -1,5 +1,0 @@
-https://github.com/mojombo/jekyll/blob/master/README.textile
-https://github.com/mojombo/jekyll/wiki
-https://github.com/mojombo/jekyll/wiki/Template-Data
-http://klepas.org/jekyll-a-static-site-generator/
-http://wiki.shopify.com/UsingLiquid
