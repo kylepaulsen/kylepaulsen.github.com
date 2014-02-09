@@ -10,37 +10,19 @@ Education
   Graduated June 2012
 
 Languages
-* Java
-* JavaScript
-* C / C++
-* SQL
-* PHP
-* Python (Novice)
-* Ruby (Novice)
-
-Technology
-* JQuery, AJAX, JSON
-* HTML5
-* Node.js
-* Android SDK
-* OpenGL
-* MVC
-* REST
+JavaScript, Java, C, C++
 
 Skills
-* Eclipse
-* Unix, Windows
-* Database Design and Management
-* Git
-* Agile Development
+Node.js, Knockout.js, Mocha, *SQL, Git, Jira, MVC, REST, Agile Development
 
 Work Experience
-  Janrain (August 2012 - Present)
-  User Interface Engineer
-  * Work in an agile team of six while tracking and completing many necessary refactor, new feature, and bug tickets in Jira.
-  * Maintain and improve Janrain's extensive "Widgets" JavaScript library that contains over 20,000 lines of code.
-  * Takes an active role in deploying the code to the testing servers for quality assurance and to production on Amazon S3.
-  * Responsible for writing unit tests using Testem and Mocha to perform quality assurance on all major browsers.
+  Janrain (August 2012 - January 2014)
+  JavaScript Engineer
+  * Played a large role in creating and maintaining Janrain’s Social Login, Share and User Management JavaScript libraries.
+  * Devised creative solutions to improve products without introducing new bugs on existing customers’ websites.
+  * Used JavaScript tools such as: Grunt, Knockout, Underscore, Q, Node, Browserify, Closure Compiler, Mocha, JSHint, and JSDoc to recreate Janrain’s Share Widget.
+  * Was readily available on call to fix critical customer issues.
+  * Created a prototyping tool to help test diverse configurations of Janrain’s User Management Product.
 
   Whizkids IT (September 2008 - Present)
   Lead Developer

@@ -1,17 +1,38 @@
 ---
 layout: main
 description: Kyle Paulsen's webpage for software development and contact information.
+bottomLinks: true
 ---
-<h1>Hello, World!</h1>
-<p>My name is Kyle Paulsen. I love to play games, eat snacks, and listen to chip tune music, but most importantly, I love to write software.</p>
-<h3><a href="kyle_paulsen_resume.pdf">Click here to view my resume.</a></h3>
-<p>I have a dropbox folder with tons of random programming projects and those are only the projects I remembered to upload! Most of my work is centered around using web technologies. Below are some of the projects I'm more proud of.</p>
-<h2>Island Fever</h2>
-<img alt="Island Fever" class="projectImage right" src="img/islandfever.jpg">
-<p>Island Fever is the start of a three.js, voxel-based, island game. Here are some of the sweet features:</p>
-<ul>
-    <li>Diverse, procedurally generated 3D islands that are waiting to be explored.</li>
-    <li>A save/load/delete system for re-visiting a island that you already generated. It uses IndexedDB!</li>
-    <li>It works on mobile too! (May take a while to load an island).</li>
-</ul>
-<p>I've always wanted to start coding some sort of three.js game that could also run in a mobile browser (specifically chrome for mobile). I tried hard to keep the code clean and fast with a sweet development environment.</p>
+<div id="middle1">
+    <div class="page">
+        <h1>Hello, World!</h1>
+        <p>My name is Kyle Paulsen. I love to play games, and listen to chip tune music. But most importantly, I love to write software.</p>
+        <p>I graduated from Portland State University in my hometown of Portland, Oregon with a Bachelors Degree in Computer Science. The types of projects that I enjoy working on in my free time are mostly web and graphics related. I like exploring new technologies and I always have an eye out for what is developing in my field. Below are some of the projects I'm more proud of.</p>
+        <h3 class="resumeh3"><a href="kyle_paulsen_resume.pdf">[Click here to view my resume]</a></h3>
+    </div>
+</div>
+<div id="middle2">
+    <div class="page">
+        <h2>Island Fever</h2>
+        <div class="projectImage right hideOnMobile">
+            <a href="#">
+                <img alt="Island Fever" src="img/islandfever.jpg">
+                <div>Click here to try</div>
+            </a>
+        </div>
+        <p>Island Fever is the start of a three.js, voxel-based, island game. Here are some of the sweet features:</p>
+        <ul>
+            <li>Diverse, procedurally generated 3D islands that are waiting to be explored.</li>
+            <li>A save/load/delete system for re-visiting a island that you already generated. It uses IndexedDB!</li>
+            <li>It works on mobile too! (May take a while to load an island).</li>
+        </ul>
+        <p>I've always wanted to start coding some sort of three.js game that could also run in a mobile browser (specifically chrome for mobile). I tried hard to keep the code clean and fast with a sweet development environment.</p>
+        <div class="projectImage showOnMobile">
+            <a href="#">
+                <img alt="Island Fever" src="img/islandfever.jpg">
+                <div>Click here to try</div>
+            </a>
+        </div>
+        <div class="clearfix">&nbsp;</div>
+    </div>
+</div>
