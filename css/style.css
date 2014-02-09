@@ -25,7 +25,7 @@ h1 {
     font-size: 42px;
     font-weight: 400;
     line-height: 52px;
-    margin-top: 44px;
+    margin-top: 38px;
     font-weight: 400;
 }
 
@@ -59,6 +59,7 @@ li {
 #top {
     background: #f4f4f4;
     padding-top: 12px;
+    border-bottom: 1px solid #0096D6;
 }
 
 #middle1 {
@@ -154,6 +155,10 @@ li {
     padding: 10px 10px 10px 0;
 }
 
+.experiment h3 {
+    margin-top: 8px;
+}
+
 .bottomLink {
     color: #525252;
 }
@@ -221,6 +226,9 @@ li {
         width: 100%;
         padding: 0;
     }
+    .experiment {
+        width: 50%;
+    }
 }
 
 @media (max-width: 600px) {
@@ -235,6 +243,9 @@ li {
         padding: 10px 30px;
     }
     .logo img {
+        width: 100%;
+    }
+    .experiment {
         width: 100%;
     }
 }
