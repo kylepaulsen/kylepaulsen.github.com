@@ -4,11 +4,6 @@ Software Engineer
 kyle.a.paulsen@gmail.com
 www.kylepaulsen.com
 
-Education
-  Bachelor of Science - Computer Science
-  Portland State University - Portland, OR
-  Graduated June 2012
-
 Languages
 JavaScript, Java, C, C++
 
@@ -16,6 +11,12 @@ Skills
 Node.js, Knockout.js, Mocha, *SQL, Git, Jira, MVC, REST, Agile Development
 
 Work Experience
+  Nike through Pro Unlimited (March 2014 — Present)
+  UI Engineer
+  * Enhanced the checkout process for Nike’s global online store, including: fixing bugs, reducing page load time, adding new UI features, etc.
+  * Partnered with another developer to implement and transition our team of 15+ from SVN to Git.
+  * Helped set up JavaScript linters for the e-commerce UI code base to improve code quality and maintainability. Used these linters to find and correct long-standing code defects.
+
   Janrain (August 2012 - January 2014)
   JavaScript Engineer
   * Played a large role in creating and maintaining Janrain’s Social Login, Share and User Management JavaScript libraries.
@@ -28,7 +29,7 @@ Work Experience
   Lead Developer
   * Designed and implemented a computer check-in system that allows technicians to track 150+ services, as well as important variables such as check-in time, monthly revenue, and service invoices.
 
-Other Experience
-  Alert Data Logging Service (September 2011 - March 2012)
-  Co-Leader and Programmer
-  * Worked in a leadership position in an agile team to complete an information logging service for a client and lead the team to using better programming methods.
+Education
+  Bachelor of Science - Computer Science
+  Portland State University - Portland, OR
+  Graduated June 2012
