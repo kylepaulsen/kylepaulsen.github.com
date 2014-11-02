@@ -169,6 +169,7 @@ li {
     width: 33%;
     float: left;
     padding: 10px 10px 10px 0;
+    min-height: 310px;
 }
 
 .experiment h3 {
@@ -177,6 +178,10 @@ li {
 
 .experiment a {
     color: #525252;
+}
+
+.randomHacks a {
+    font-size: 14px;
 }
 
 .thumbnail img {
@@ -225,6 +230,9 @@ li {
         max-width: 800px;
         padding: 10px 30px;
     }
+    .experiment {
+        min-height: 280px;
+    }
 }
 
 @media (max-width: 800px) {
@@ -240,6 +248,7 @@ li {
     }
     .experiment {
         width: 50%;
+        min-height: 310px;
     }
 }
 
@@ -247,6 +256,9 @@ li {
     .page {
         max-width: 800px;
         padding: 10px 30px;
+    }
+    .experiment {
+        min-height: 285px;
     }
 }
 
@@ -259,5 +271,6 @@ li {
     }
     .experiment {
         width: 100%;
+        min-height: 0;
     }
 }
