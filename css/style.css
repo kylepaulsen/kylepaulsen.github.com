@@ -83,6 +83,14 @@ li {
     padding: 10px;
 }
 
+.page a {
+    color: #a4a4a4;
+}
+
+.page a:hover {
+    color: #666666;
+}
+
 .logo {
     float: left;
 }
@@ -129,6 +137,14 @@ li {
     background: #0096D6;
 }
 
+.project {
+    margin-top: 60px;
+}
+
+.project:first-of-type {
+    margin-top: 0;
+}
+
 .projectImage {
     width: 40%;
     padding: 0px 20px 20px 20px;
@@ -157,10 +173,6 @@ li {
 
 .experiment h3 {
     margin-top: 8px;
-}
-
-.bottomLink {
-    color: #525252;
 }
 
 .experiment a {
