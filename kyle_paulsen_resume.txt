@@ -8,10 +8,16 @@ Languages
 JavaScript, Java, C, C++
 
 Skills
-Node.js, Knockout.js, Mocha, *SQL, Git, Jira, MVC, REST, Agile Development
+Node.js, Mocha, *SQL, Git, Jira, MVC/MV*, REST, Agile Development
 
 Work Experience
-  Nike through Pro Unlimited (March 2014 — Present)
+  Autodesk (October 2015 - Present)
+  Software Engineer
+  * Assisted with converting Autodesk's 3D modeling application, Fusion 360, into a web application.
+  * Explored alternative UI frameworks that could potentially increase development speed and maintainability.
+  * Was a good resource for git and other environment related tasks.
+
+  Nike (March 2014 - October 2015)
   UI Engineer
   * Enhanced the checkout process for Nike’s global online store, including: fixing bugs, reducing page load time, adding new UI features, etc.
   * Partnered with another developer to implement and transition our team of 15+ from SVN to Git.
@@ -20,14 +26,12 @@ Work Experience
   Janrain (August 2012 - January 2014)
   JavaScript Engineer
   * Played a large role in creating and maintaining Janrain’s Social Login, Share and User Management JavaScript libraries.
-  * Devised creative solutions to improve products without introducing new bugs on existing customers’ websites.
   * Used JavaScript tools such as: Grunt, Knockout, Underscore, Q, Node, Browserify, Closure Compiler, Mocha, JSHint, and JSDoc to recreate Janrain’s Share Widget.
+  * Devised creative solutions to improve products without introducing new bugs on existing customers’ websites.
   * Was readily available on call to fix critical customer issues.
   * Created a prototyping tool to help test diverse configurations of Janrain’s User Management Product.
 
-  Whizkids IT (September 2008 - Present)
-  Lead Developer
-  * Designed and implemented a computer check-in system that allows technicians to track 150+ services, as well as important variables such as check-in time, monthly revenue, and service invoices.
+  Whizkids IT (September 2008 - August 2012)
 
 Education
   Bachelor of Science - Computer Science
