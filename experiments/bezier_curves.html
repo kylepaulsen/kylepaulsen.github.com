@@ -23,8 +23,8 @@ http://opensource.org/licenses/MIT
     <ul>
     <li>Click and drag to draw a line.</li>
     <li>Click and drag circles to move control points.</li>
-    <li>Hold control and click on a white area to add a new control point.</li>
-    <li>Hold control and click on a control point to delete it.</li>
+    <li>Hold shift and click on a white area to add a new control point.</li>
+    <li>Hold shift and click on a control point to delete it.</li>
     <li>Press the delete key to delete the selected line.</li>
     </ul>
     <div style="float: left;">
@@ -77,7 +77,7 @@ http://opensource.org/licenses/MIT
         var mouseDragging = false;
         var mousePt = {};
 
-        var ctrlDown = false;
+        var shiftDown = false;
 
         var curves = [];
         var showCtrl = true;
@@ -126,7 +126,7 @@ http://opensource.org/licenses/MIT
                     selCtrlPt.y = canvasPt.y;
                     drawCurves();
                 } else {
-                    if (!ctrlDown) {
+                    if (!shiftDown) {
                         var newCurve = new Curve(mousePt.x, mousePt.y, canvasPt.x, canvasPt.y);
                         curves.push(newCurve);
                         selCurve = newCurve;
@@ -142,7 +142,7 @@ http://opensource.org/licenses/MIT
                 x -= canvasRect.left;
                 y -= canvasRect.top;
 
-                if (ctrlDown) {
+                if (shiftDown) {
                     if (selCtrlPt === undefined) {
                         selCurve.addPoint(mousePt.x, mousePt.y);
                     } else {
@@ -157,9 +157,9 @@ http://opensource.org/licenses/MIT
             window.addEventListener('keydown', function(e) {
                 var key_code = e.which;
 
-                if (key_code === 17) {
+                if (key_code === 16) {
                     //ctrl key
-                    ctrlDown = true;
+                    shiftDown = true;
                 } else if (key_code === 46) {
                     //delete key
                     if (selCurve !== undefined) {
@@ -169,8 +169,8 @@ http://opensource.org/licenses/MIT
             });
             window.addEventListener('keyup', function(e) {
                 var key_code = e.which;
-                if (key_code === 17) {
-                    ctrlDown = false;
+                if (key_code === 16) {
+                    shiftDown = false;
                 }
             });
 
