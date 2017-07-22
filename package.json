@@ -1,0 +1,25 @@
+{
+  "name": "website",
+  "version": "1.0.0",
+  "description": "My website",
+  "main": "build.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kylepaulsen/kylepaulsen.github.com.git"
+  },
+  "author": "Kyle Paulsen <kyle.a.paulsen@gmail.com> (http://www.kylepaulsen.com/)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kylepaulsen/kylepaulsen.github.com/issues"
+  },
+  "homepage": "https://github.com/kylepaulsen/kylepaulsen.github.com#readme",
+  "dependencies": {
+    "handlebars": "^4.0.10",
+    "metalsmith": "^2.3.0",
+    "metalsmith-layouts": "^1.8.1",
+    "rimraf": "^2.6.1"
+  }
+}

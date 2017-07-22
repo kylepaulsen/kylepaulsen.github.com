@@ -2,9 +2,9 @@
 <html>
 <head>
     <meta charset="utf-8" />
-    <title>{% if page.title %} {{ page.title }} | {% endif %}Kyle Paulsen, Software Engineer</title>
+    <title>{{#if title}}{{ title }} | {{/if}}Kyle Paulsen, Software Engineer</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="{{ page.description }}">
+    <meta name="description" content="{{ description }}">
     <meta name="author" content="Kyle Paulsen">
 
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
@@ -29,12 +29,12 @@
             <div class="clearfix"></div>
         </div>
     </div>
-    {{ content }}
+    {{{ contents }}}
     <div id="bottom">
         <div class="page">
-            {% if page.bottomLinks %}
+            {{#if bottomLinks }}
                 <h3><a class="bottomLink" href="experiments.html">[Experiments]</a></h3>
-            {% endif %}
+            {{/if}}
             <div class="bottom-social showOnMobile">
                 <a class="icon" target="_blank" href="mailto:kyle.a.paulsen@gmail.com">&#xe600;<span class="visuallyhidden">Mail</span></a>
                 <a class="icon" target="_blank" href="http://www.linkedin.com/in/kylepaulsen">&#xe602;<span class="visuallyhidden">LinkedIn</span></a>
