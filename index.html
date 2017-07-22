@@ -17,31 +17,41 @@
     <div id="top">
         <div class="page">
             <div class="logo">
-                <a href="http://www.kylepaulsen.com/">
+                <a href="https://www.kylepaulsen.com/">
                     <img src="img/KyleLogo.svg" alt="Kyle Paulsen">
                 </a>
             </div>
-            <div class="social hideOnMobile">
+            <div class="social">
                 <a class="icon" target="_blank" href="mailto:kyle.a.paulsen@gmail.com">&#xe600;<span class="visuallyhidden">Mail</span></a>
                 <a class="icon" target="_blank" href="http://www.linkedin.com/in/kylepaulsen">&#xe602;<span class="visuallyhidden">LinkedIn</span></a>
                 <a class="icon" target="_blank" href="https://github.com/kylepaulsen">&#xe601;<span class="visuallyhidden">Github</span></a>
             </div>
-            <div class="clearfix"></div>
         </div>
     </div>
     <div id="middle1">
     <div class="page">
         <h1>Hello, World!</h1>
         <p>My name is Kyle Paulsen. I love to play games, and listen to chip tune music. But most importantly, I love to write software.</p>
-        <p>I graduated from Portland State University in my hometown of Portland, Oregon with a Bachelors Degree in Computer Science. The types of projects that I enjoy working on in my free time are mostly web and graphics related. I like exploring new technologies and I always have an eye out for what is developing in my field. Below are some of the projects I'm more proud of.</p>
+        <p>I graduated from Portland State University in my hometown of Portland, Oregon with a Bachelors Degree in Computer Science. The types of projects that I enjoy working on in my free time are mostly web and graphics related. I like exploring new technologies and I always have an eye out for what is developing in my field. Below are some of my favorite projects.</p>
         <h3 class="resumeh3"><a href="kyle_paulsen_resume.pdf">[Click here to view my resume]</a></h3>
     </div>
 </div>
 <div id="middle2">
     <div class="page">
         <div class="project">
+            <h2>Pitch Defense</h2>
+            <div class="projectImage">
+                <a href="pitch-defense" target="_blank">
+                    <img alt="Island Fever" src="img/pitchDefense.png">
+                    <div>Click here to play</div>
+                </a>
+            </div>
+            <p>Pitch Defense is a game where you use your voice to destroy rockets. Each rocket has a pitch that it is weak to. If you can make the same note long enough, you can destroy the rockets before they blow up your (in game) speaker.</p>
+            <p>The game originally started as just an experiment to fool around with Javascript's audio API and learn audio processing. I later discovered the Phaser game making engine and decided to make a game out of this. Don't forget to allow your browser to use your microphone. Good luck!</p>
+        </div>
+        <div class="project">
             <h2>Resource Override</h2>
-            <div class="projectImage right hideOnMobile">
+            <div class="projectImage">
                 <a href="https://chrome.google.com/webstore/detail/resource-override/pkoacgokdfckfpndoffpifphamojphii" target="_blank">
                     <img alt="Resource Override" src="img/resourceOverride.png">
                     <div>Click here to get it</div>
@@ -50,40 +60,10 @@
             <p>Resource Override is a Chrome extension to help you gain full control of any website by redirecting traffic, replacing, editing, or inserting new content. <a href="https://github.com/kylepaulsen/ResourceOverride" target="_blank">Github Page</a>.</p>
             <p>This extension will allow you to redirect URLs on the fly before requests are made. You can also redirect URLs to text documents that you can create with this extension. If you need to inject JavaScript or CSS files, this extension has you covered.</p>
             <p>This tool is great for debugging production websites, as you can edit and inject code on the fly. You no longer have to scan through minified code as you can just redirect to an unminified version or paste in the unminified version with the integrated file editor.</p>
-            <div class="projectImage showOnMobile">
-                <a href="https://chrome.google.com/webstore/detail/resource-override/pkoacgokdfckfpndoffpifphamojphii" target="_blank">
-                    <img alt="Resource Override" src="img/resourceOverride.png">
-                    <div>Click here to get it</div>
-                </a>
-            </div>
-        </div>
-        <div class="project">
-            <h2>NanoModal</h2>
-            <div class="projectImage right hideOnMobile">
-                <a href="http://jsfiddle.net/aKL44/3/" target="_blank">
-                    <img alt="Island Fever" src="img/nanomodal.png">
-                    <div>Click here to try</div>
-                </a>
-            </div>
-            <p>NanoModal is yet another modal / dialog library written in a small amount of pure JavaScript. <a href="https://github.com/kylepaulsen/NanoModal" target="_blank">Github Page</a>. Features:</p>
-            <ul>
-                <li>Tiny: ~2.6kb minified and gzipped or ~6.6kb just minified.</li>
-                <li>100% self contained. Does not require other libraries, css, or any other resources.</li>
-                <li>Completely customizable. Everything has a class (or can be given a class) that you can apply your own styles to.</li>
-                <li>Tested for bugs and memory leaks on Chrome, Firefox, IE8+, Mobile Safari, and Android's Browser. It's mobile ready!</li>
-                <li>Easy to use and licensed under MIT!</li>
-            </ul>
-            <p>I wanted a modal library that was small, easy to use, and worked everywhere - thus NanoModal was born. When I was writing NanoModal, my main goals were: it should be tiny, fully customizable, and it should work on all major browsers (including mobile). Most modal libraries don't work well (or at all) on mobile, especially when users rotate or zoom their device while looking at a modal. I aimed to fix all these problems and make the best modal library I possibly could.</p>
-            <div class="projectImage showOnMobile">
-                <a href="http://jsfiddle.net/aKL44/3/" target="_blank">
-                    <img alt="Island Fever" src="img/nanomodal.png">
-                    <div>Click here to try</div>
-                </a>
-            </div>
         </div>
         <div class="project">
             <h2>Island Fever</h2>
-            <div class="projectImage right hideOnMobile">
+            <div class="projectImage">
                 <a href="islandFever/">
                     <img alt="Island Fever" src="img/islandfever.png">
                     <div>Click here to try</div>
@@ -96,21 +76,14 @@
                 <li>It works on mobile too! (May take a while to load an island).</li>
             </ul>
             <p>I've always wanted to start coding some sort of three.js game that could also run in a mobile browser (specifically chrome for mobile). I tried hard to keep the code clean and fast with a sweet development environment.</p>
-            <div class="projectImage showOnMobile">
-                <a href="islandFever/">
-                    <img alt="Island Fever" src="img/islandfever.png">
-                    <div>Click here to try</div>
-                </a>
-            </div>
         </div>
-        <div class="clearfix">&nbsp;</div>
     </div>
 </div>
 
     <div id="bottom">
         <div class="page">
-                <h3><a class="bottomLink" href="experiments.html">[Experiments]</a></h3>
-            <div class="bottom-social showOnMobile">
+                <h3><a class="bottomLink" href="experiments.html">[Other Experiments]</a></h3>
+            <div class="bottom-social">
                 <a class="icon" target="_blank" href="mailto:kyle.a.paulsen@gmail.com">&#xe600;<span class="visuallyhidden">Mail</span></a>
                 <a class="icon" target="_blank" href="http://www.linkedin.com/in/kylepaulsen">&#xe602;<span class="visuallyhidden">LinkedIn</span></a>
                 <a class="icon" target="_blank" href="https://github.com/kylepaulsen">&#xe601;<span class="visuallyhidden">Github</span></a>

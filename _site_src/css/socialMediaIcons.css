@@ -9,6 +9,7 @@
 	font-weight: normal;
 	font-style: normal;
 }
+
 .icon {
 	font-family: 'SocialMediaIcons';
 	speak: none;
@@ -22,6 +23,7 @@
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
+
 [class^="icon-"], [class*=" icon-"] {
 	font-family: 'SocialMediaIcons';
 	speak: none;
@@ -35,6 +37,7 @@
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
+
 .icon-linkedin:before {
 	content: "\e602";
 }
