@@ -3,6 +3,7 @@ const path = require('path');
 
 const metalsmith = require('metalsmith');
 const layouts = require('metalsmith-layouts');
+const inPlace = require('metalsmith-in-place');
 
 const postcss = require('postcss');
 const precss = require('precss');
@@ -44,6 +45,7 @@ function postCss() {
 if (process.argv[2] !== 'clean') {
     console.log('Starting metalsmith build...');
     metalsmith(__dirname)
+        .use(inPlace())
         .use(layouts({
             engine: 'handlebars',
             directory: '_layouts'

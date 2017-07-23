@@ -1,0 +1,73 @@
+---
+layout: main.html
+title: Experiments
+description: Kyle Paulsen's small projects that were created in an afternoon for fun.
+experiments:
+  - name: Shader Canvas
+    image: img/shaderCanvas.png
+    link: stuff/ShaderCanvas
+
+  - name: 3D Cave Generation
+    image: img/caveGen3d.png
+    link: stuff/caveGen3d
+
+  - name: Gravity Simulation
+    image: img/nBodyTest.png
+    link: stuff/nBodyTest.html
+
+  - name: Image to Perler
+    image: img/img2perler.png
+    link: stuff/image2perler
+
+  - name: Audio Waves
+    image: img/audioWaves.png
+    link: stuff/audioWaves.html
+
+  - name: Shader ASM
+    image: img/shaderASM.png
+    link: stuff/shaderASM
+
+  - name: Path Finding with A*
+    image: img/pathfinding.png
+    link: stuff/pathfinding
+
+  - name: Infinite Voxel World
+    image: img/voxelworld.png
+    link: stuff/voxelWorld
+
+  - name: Elementary Cellular Automata
+    image: img/cellular_automata.png
+    link: stuff/cellular_automata.html
+
+  - name: Conway's Game of Life
+    image: img/gol.png
+    link: stuff/game_of_life.html
+
+  - name: Mandelbrot Set
+    image: img/mandel.png
+    link: stuff/mandelbrotSet.html
+
+  - name: Bézier Curves
+    image: img/bezier.png
+    link: stuff/bezier_curves.html
+---
+<div id="middle2">
+    <div class="page">
+        <h1>Experiments</h1>
+
+        <div class="experimentContainer">
+            {{#each experiments}}
+                 <div class="experiment">
+                    <a class="thumbnail" href="{{link}}">
+                        <img alt="Cellular Automata" src="{{image}}">
+                    </a>
+                    <a href="{{link}}"><h3>{{name}}</h3></a>
+                </div>
+            {{/each}}
+        </div>
+
+        <div class="randomHacks">
+            <a href="stuff">[More Random Unpolished Hacks]</a>
+        </div>
+    </div>
+</div>
