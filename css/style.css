@@ -149,10 +149,10 @@ li {
     margin-bottom: 50px;
 }
 .resumeh3 a {
-        color: #666666;
+        color: #cacaca;
     }
 .resumeh3 a:hover {
-        color: #cacaca
+        color: #666666;
     }
 .bottom-social {
     text-align: center;

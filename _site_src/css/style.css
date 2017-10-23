@@ -172,10 +172,10 @@ li {
 .resumeh3 {
     margin-bottom: 50px;
     a {
-        color: #666666;
+        color: $linkHoverColor2;
     }
     a:hover {
-        color: $linkHoverColor2
+        color: $linkHoverColor1;
     }
 }
 
