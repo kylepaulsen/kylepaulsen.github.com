@@ -129,6 +129,7 @@ li {
     margin: 2px 4px 0 4px;
     text-decoration: none;
     font-size: 24px;
+    transition: background 0.4s, color 0.4s;
 }
 .social {
     display: none;
@@ -186,16 +187,45 @@ li {
         margin: 0;
     }
 }
-.projectImage div {
-        color: #ffffff;
-        font-size: 14px;
-        margin-top: -40px;
-}
 .projectImage img {
         width: 100%;
+        transition: filter 0.4s;
+        filter: brightness(50%);
 }
-.projectImage a:hover div {
-        color: #cacaca;
+@media (min-width: 768px) {
+    .projectImage img {
+        filter: brightness(100%);
+    }
+}
+.projectImage a {
+        position: relative;
+        overflow: hidden;
+        display: block;
+        font-size: 0;
+}
+.projectImage .projectImageText {
+        bottom: 0px;
+        position: absolute;
+        width: 100%;
+        font-size: 20px;
+        transition: bottom 0.4s;
+        color: #fff;
+}
+@media (min-width: 768px) {
+    .projectImage .projectImageText {
+        bottom: -30px;
+    }
+}
+.projectImage:hover img {
+            filter: brightness(50%);
+}
+.projectImage:hover .projectImageText {
+            bottom: 0px;
+}
+@media (min-width: 768px) {
+    .projectImage:hover .projectImageText {
+        bottom: 15px;
+    }
 }
 .experimentContainer {
     display: flex;

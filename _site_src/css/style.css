@@ -150,6 +150,7 @@ li {
     margin: 2px 4px 0 4px;
     text-decoration: none;
     font-size: 24px;
+    transition: background 0.4s, color 0.4s;
 }
 
 .social {
@@ -213,18 +214,44 @@ li {
         margin: 0;
     }
 
-    div {
-        color: #ffffff;
-        font-size: 14px;
-        margin-top: -40px;
-    }
-
     img {
         width: 100%;
+        transition: filter 0.4s;
+        filter: brightness(50%);
+        @media(--md) {
+            filter: brightness(100%);
+        }
     }
 
-     a:hover div {
-        color: $linkHoverColor2;
+    a {
+        position: relative;
+        overflow: hidden;
+        display: block;
+        font-size: 0;
+    }
+
+    .projectImageText {
+        bottom: 0px;
+        position: absolute;
+        width: 100%;
+        font-size: 20px;
+        transition: bottom 0.4s;
+        color: #fff;
+        @media(--md) {
+            bottom: -30px;
+        }
+    }
+
+    &:hover {
+        img {
+            filter: brightness(50%);
+        }
+        .projectImageText {
+            bottom: 0px;
+            @media(--md) {
+                bottom: 15px;
+            }
+        }
     }
 }
 
